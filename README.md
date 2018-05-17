@@ -3,5 +3,6 @@ Projeto da disciplina de Teoria da Informação e Codificação, onde deve ser m
 
 Bibliotecas utilizadas:
 
---* [matplotlib](https://matplotlib.org)
---* [skimage](http://scikit-image.org)
+[matplotlib](https://matplotlib.org)
+
+[skimage](http://scikit-image.org)

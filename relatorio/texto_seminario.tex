@@ -3,6 +3,36 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+ 
+\lstset{
+  language=Python,                
+  basicstyle=\footnotesize,           
+  numbers=left,                   
+  numberstyle=\tiny\color{gray},  
+  stepnumber=2,                             
+  numbersep=5pt,                  
+  backgroundcolor=\color{white},    
+  showspaces=false,               
+  showstringspaces=false,         
+  showtabs=false,                 
+  frame=single,                   
+  rulecolor=\color{black},        
+  tabsize=2,                      
+  captionpos=b,                   
+  breaklines=true,                
+  breakatwhitespace=false,        
+  title=\lstname,                               
+  keywordstyle=\color{blue},          
+  commentstyle=\color{dkgreen},       
+  stringstyle=\color{mauve},     
+}
 \usepackage{lipsum}
 
 
@@ -12,13 +42,13 @@
 
 \begin{document}
 
-\title{Escreva o Título do Seu Seminário Aqui}
+\title{Quantidade de informação em Imagens}
 
 
-\author{Primeiro Autor, Segundo Autor e Terceiro Autor\\
+\author{Arivanilton Júnior, Felipe Lira e Jefferson Maximiliano\\
 
 Instituto Federal de Educação, Ciência e Tecnologia da Paraíba\\Campus Campina Grande\\
-E-mail:email1@mail.com; email2@mailxx.com e mail3@jjmail.com\\
+E-mail:arivanilton.junior@mail.com; email2@mailxx.com e mail3@jjmail.com\\
 }
 
 
@@ -31,12 +61,7 @@ E-mail:email1@mail.com; email2@mailxx.com e mail3@jjmail.com\\
 Escreva aqui o seu resumo. Blá blá... 
 Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...Blá blá...
 Blá blá...Blá blá...Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-Blá blá...Blá blá...Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-Blá blá...Blá blá...Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... 
-
+Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá blá... Blá 
 \end{abstract}
 
 
@@ -54,28 +79,70 @@ Primeira Palavra-chave, Segunda Palavra-chave, Terceira Palavra-chave.
 
 \section{Introdução}
 
-Escreva aqui seu texto de introdução. 
-
-\lipsum[3-5] % Esse comando insere texto sem sentido. Pode retira-lo daqui.
+ A informação é a medida da probabilidade da ocorrência, estando relacionada com a incerteza, o desconhecimento a priori. Nesse trabalho, exploramos a aferição da quantidade de informação contida em uma imagem, descrevendo o comportamento do código proposto como possível solução...
 
 
-\begin{quotation}
-Um exemplo de texto com citação direta. \lipsum[1-1]
-Esse último comando cita uma referencia que está cadastrada no arquivo referencias.bib~\cite{mitola1999cognitive}. %Esse último comando cita uma referencia que está cadastrada no arquivo referencias.bib
 
-%Exemplo de figura ocupando as duas colunas
-\begin{figure*}[!th]
-	\centering
-	\includegraphics[width=\textwidth]{fluxo.png}
-	\caption{Simulação do experimento}
-\end{figure*}
+\section{Descrição da solução}
 
-
+\subsection{Linguagem}
+    Para o desenvolvimento dessa analise, foi utilizada a linguagem de programação Python, que pode ser definida como:
+\begin{quotation}Uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.
 \end{quotation}
 
-\subsection{Título da Subseção}
-\lipsum[1]
+Sua escolha se deu pelo fato de possuir uma enorme quantidade de bibliotecas voltadas a computação científica disponíveis a comunidade, como as utilizadas no projeto.
+Dentre as varias distribuições do Python, optou-se por utilizar a Anaconda, uma distribuição Open Source e livre que possui além do Python, a linguagem R e mais de 250 pacotes voltados a data science, minimizando assim problemas com dependências de bibliotecas. 
+\subsection{Bibliotecas}
+No modelo trazido como solução, foram utilizadas as bibliotecas skimage e matplotlib.
 
+\subsubsection{Skimage}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.3]{logo}
+	\caption{logo Skimage}
+\end{figure}
+A biblioteca scikit-image(ou skimage) é, em tradução livre da pagina do projeto, uma coleção de algoritmos para processamento de imagem, gratuita e livre de restrições, escrita por uma comunidade ativa de voluntários. 
+
+\subsubsection{Matplotlib}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.3]{logo2}
+	\caption{logo matplotlib}
+\end{figure}
+
+A biblioteca matplotlib é voltada a plotagem figuras 2D em uma grande variedade de formatos, podendo gerar gráficos, histogramas, espectros de potência, gráficos de barras, gráficos de erros, diagramas de dispersão, etc., com apenas algumas linhas de código.
+
+\subsection{Código}
+
+ \begin{lstlisting}
+
+import matplotlib.pyplot as plt
+from skimage.io import imread
+from skimage.filters.rank import entropy
+from skimage.morphology import disk
+
+imagem = "macacofezsilfie.jpg" 
+image = imread(imagem, as_grey= True) 
+
+fig, (ax0, ax1) = plt.subplots(ncols=2, figsize=(12, 4),sharex=True, sharey=True)
+
+img0 = ax0.imshow(image, cmap=plt.cm.gray)
+ax0.set_title("Imagem")
+ax0.axis("off")
+fig.colorbar(img0, ax=ax0)
+
+img1 = ax1.imshow(entropy(image, disk(5)), cmap='gray')
+ax1.set_title("Entropy")
+ax1.axis("off")
+fig.colorbar(img1, ax=ax1)
+
+fig.tight_layout()
+
+plt.show()
+
+\end{lstlisting}
 Veja como criar uma lista:
 \begin{enumerate}
     \item Esse é o primeiro item
@@ -91,21 +158,8 @@ Veja como criar uma lista:
 
 
 \section{Outra Seção}
-\lipsum[1-2]
-
-Figura em uma só coluna
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[scale=0.5]{gnuradio}
-	\caption{Simulação do experimento}
-\end{figure}
 
 
-\section{Mais uma Seção}
-\lipsum[1-2]
-
-\section{Mais uma Seção}
-\lipsum[1-5]
 
 
 \section{Conclusão}
